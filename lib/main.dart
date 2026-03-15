@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vertex/core/router/app_router.dart';
 
 void main() {
@@ -11,9 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: "Vertex",
-      routerConfig: appRouter
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        title: "Vertex",
+        debugShowCheckedModeBanner: false,
+        routerConfig: appRouter,
+      ),
     );
   }
 }
