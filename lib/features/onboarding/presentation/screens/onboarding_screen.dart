@@ -89,7 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               onPressed: () {
                 if (currentIndex < 2) {
                   pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                   );
                 } else {

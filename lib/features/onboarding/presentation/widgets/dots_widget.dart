@@ -13,7 +13,7 @@ class DotsWidget extends StatelessWidget {
       children: List.generate(
         itemCount,
         (index) => AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 200),
           margin: EdgeInsets.symmetric(horizontal: 5.w),
           height: 10,
           width: currentIndex == index ? 30 : 10,
