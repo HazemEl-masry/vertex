@@ -16,7 +16,7 @@ class DotsWidget extends StatelessWidget {
           duration: const Duration(milliseconds: 300),
           margin: EdgeInsets.symmetric(horizontal: 5.w),
           height: 10,
-          width: currentIndex == index ? 20 : 10,
+          width: currentIndex == index ? 30 : 10,
           decoration: BoxDecoration(
             color: currentIndex == index ? Colors.blue : Colors.grey,
             borderRadius: BorderRadius.circular(5.r),
