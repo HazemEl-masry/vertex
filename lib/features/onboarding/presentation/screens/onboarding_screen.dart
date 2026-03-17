@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:vertex/features/onboarding/presentation/cubits/onboarding_cubit/onboarding_cubit.dart';
 import 'package:vertex/features/onboarding/presentation/cubits/onboarding_cubit/onboarding_state.dart';
 import 'package:vertex/features/onboarding/presentation/widgets/dots_widget.dart';
-import 'package:vertex/features/onboarding/presentation/widgets/onboarding_page_widget.dart';
+import 'package:vertex/features/onboarding/presentation/widgets/onboarding_pages.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -20,30 +20,9 @@ class OnboardingScreen extends StatelessWidget {
         builder: (context, state) {
           return Stack(
             children: [
-              PageView(
+              OnboardingPages(
                 controller: cubit.pageController,
-                physics: const NeverScrollableScrollPhysics(),
                 onPageChanged: cubit.onPageChanged,
-                children: const [
-                  OnboardingPageWidget(
-                    image: 'assets/images/onboarding_1.webp',
-                    title: 'Discover Your Dream\nDestination',
-                    subTitle:
-                        'Explore thousands of breathtaking places\naround the globe curated just for you.',
-                  ),
-                  OnboardingPageWidget(
-                    image: 'assets/images/onboarding_2.webp',
-                    title: 'Book Flights & Hotels\nEasily',
-                    subTitle:
-                        'Find the best deals on flights, premium\nhotels, and local transportation all in one\nplace.',
-                  ),
-                  OnboardingPageWidget(
-                    image: 'assets/images/onboarding_3.1.webp',
-                    title: 'Plan Your Hajj & Umrah',
-                    subTitle:
-                        'Exclusive trusted packages designed to give\nyou peace of mind during your spiritual\njourney.',
-                  ),
-                ],
               ),
               Positioned(
                 top: screenHeight * 0.55,
