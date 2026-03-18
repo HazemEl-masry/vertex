@@ -14,7 +14,7 @@ class SocialMediaButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: onPressed,
-      icon: SvgPicture.asset(iconPath),
+      icon: SvgPicture.asset(iconPath,width: 40,),
     );
   }
 }

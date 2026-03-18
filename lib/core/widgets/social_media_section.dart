@@ -18,7 +18,7 @@ class SocialMediaSection extends StatelessWidget {
           onPressed: () {},
         ),
         SocialMediaButton(
-          iconPath: "assets/svg/icons8-apple.svg",
+          iconPath: "assets/svg/apple.0_svg.svg",
           onPressed: () {},
         ),
       ],
