@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vertex/core/widgets/custom_main_button.dart';
 import 'package:vertex/core/widgets/social_media_section.dart';
 import 'package:vertex/features/auth/presentation/widgets/login_form.dart';
@@ -57,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => context.push("/RegisterScreen"),
                     child: const Text(
                       "Register",
                       style: TextStyle(fontWeight: FontWeight.bold),
