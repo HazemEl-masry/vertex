@@ -14,7 +14,7 @@ class LoginForm extends StatelessWidget {
           CustomTextFormField(
             hintText: "Email address",
             keyboardType: TextInputType.emailAddress,
-            prefixIcon: const Icon(Icons.email),
+            prefixIcon: const Icon(Icons.email, size: 18),
             controller: TextEditingController(),
             validator: (value) {},
           ),
@@ -22,9 +22,12 @@ class LoginForm extends StatelessWidget {
           CustomTextFormField(
             hintText: "Password",
             keyboardType: TextInputType.visiblePassword,
-            prefixIcon: SvgPicture.asset(
-              "assets/svg/lock_svg.svg",
-              fit: BoxFit.scaleDown,
+            prefixIcon: Transform.scale(
+              scale: 0.7,
+              child: SvgPicture.asset(
+                "assets/svg/lock_svg.svg",
+                fit: BoxFit.scaleDown,
+              ),
             ),
             suffixIcon: IconButton(
               onPressed: () {},
